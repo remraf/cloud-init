@@ -1,0 +1,12 @@
+#cloud-config
+package_update: true
+package_upgrade: true
+packages:
+  - emacs
+  - tmux
+  - vim
+runcmd:
+  - yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+  - yum install -y http://mirror.centos.org/centos/8/PowerTools/x86_64/os/Packages/lua-filesystem-1.6.3-7.el8.x86_64.rpm
+  - yum install -y http://mirror.centos.org/centos/8/PowerTools/x86_64/os/Packages/lua-posix-33.3.1-9.el8.x86_64.rpm
+  - yum install -y Lmod
